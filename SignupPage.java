@@ -6,19 +6,19 @@ import org.openqa.selenium.WebDriver;
 public class SignupPage {
     WebDriver driver;
 
-    // Locators
+   
     By emailField = By.cssSelector("input[name='username'][type='email']");
     By passwordField = By.cssSelector("input[name='password'][type='password']");
     By loginButton = By.cssSelector("div[title='Log In']");
     By errorMessage = By.cssSelector("div.slds-notify_toast.slds-theme_error");
     By successMessage = By.xpath("//h1[contains(text(), 'Account created successfully!')]");
 
-    // Constructor
+    
     public SignupPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    // Methods
+    
     public void setEmail(String email) {
         driver.findElement(emailField).clear();
         driver.findElement(emailField).sendKeys(email);
