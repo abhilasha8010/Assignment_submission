@@ -137,13 +137,6 @@ Test Name: validateValidEmail
 
 Verifies success message on submitting a registered email.
 
-Contributing
-
-Fork the repository.
-
-Create a new branch for your feature/bug fix.
-
-Submit a pull request with a detailed description of your changes.
 
 ## License :-
 
