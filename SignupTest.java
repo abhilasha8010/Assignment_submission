@@ -21,18 +21,18 @@ public class SignupTest {
 
     @BeforeClass
     public void setup() {
-        // Set up WebDriver
+       
         System.setProperty("webdriver.chrome.driver", "/Users/Owner/Downloads/chromedriver-win64/chromedriver-win64/chromedriver.exe");
     	//WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.slds-notify_toast.slds-theme_error")));
+        
 
         driver.get("https://app-staging.nokodr.com/");
 
-        // Initialize the page object
+        
         signupPage = new SignupPage(driver);
     }
 
