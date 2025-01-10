@@ -16,14 +16,13 @@ public class LoginTest {
 
     @BeforeClass
     public void setup() {
-        // Set up WebDriver
+        
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://app-staging.nokodr.com/");
 
-        // Initialize the LoginPage object
         loginPage = new LoginPage(driver);
     }
 
