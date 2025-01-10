@@ -10,19 +10,19 @@ import java.time.Duration;
 public class LoginPage {
     WebDriver driver;
 
-    // Locators
+    
     By usernameField = By.cssSelector("input[name='username'][type='email']");
     By passwordField = By.cssSelector("input[name='password'][type='password']");
     By loginButton = By.cssSelector("div[title='Log In']");
     By errorMessage = By.cssSelector("div.slds-notify_toast.slds-theme_error");
     By successMessage = By.xpath("//h1[contains(text(), 'Dashboard')]");
 
-    // Constructor
+    
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    // Methods
+    
     public void setUsername(String username) {
         driver.findElement(usernameField).clear();
         driver.findElement(usernameField).sendKeys(username);
